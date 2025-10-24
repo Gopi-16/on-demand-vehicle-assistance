@@ -1,9 +1,7 @@
 // src/App.js
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./navbar";
-import Login from "./Login";
-import Register_user from "./Register_user";
-import ServiceForm from "./Service_form";
+import Layout from "./Layout";
+
 function Home() {
   return <h1 className="text-2xl">Home Page</h1>;
 }
@@ -23,9 +21,6 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="login" element={<Login/>}/>
-          <Route path="register" element={<Register_user/>}/>
-          <Route path="ServiceForm" element={<ServiceForm/>}/>
         </Route>
       </Routes>
     </Router>
