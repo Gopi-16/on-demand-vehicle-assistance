@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 const Login=()=>{
-    const  [username,setuserName]=useState("");
+    const [username,setuserName]=useState("");
     const [Password,setPassword]=useState("");
     const handleSubmit=async (e)=>{
         e.preventDefault();
