@@ -10,6 +10,7 @@ export default function Layout() {
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
         <Link to="/ServiceForm">Service Form</Link>
+        <Link to="/ProfilePage">Profile Page</Link>
       </nav>
       <main className="p-4">
         <Outlet />

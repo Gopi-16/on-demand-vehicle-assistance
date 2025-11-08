@@ -9,14 +9,17 @@ import {
   Box,
   Stack
 } from "@mui/material";
+import { useParams } from "react-router-dom";
 
-const ServiceForm = () => {
+export default function ServiceForm({  onClose }){
+  const {type}= useParams();
+  const serviceType = type;
   const [username, setuserName] = useState("");
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
   const [mobile, setMobile] = useState("");
   const [vehicle_number, setVehicle] = useState("");
-  const [repair_msg, setRepair_msg] = useState("");
+  const [repair_msg, setRepair_msg] = useState(serviceType);
   const [createdAt, setCreatedAt] = useState("");
 
   const handleSubmit = async (e) => {
@@ -106,6 +109,7 @@ const ServiceForm = () => {
               fullWidth
               multiline
               rows={3}
+              value={repair_msg}
               onChange={(e) => setRepair_msg(e.target.value)}
             />
 
@@ -126,4 +130,4 @@ const ServiceForm = () => {
   );
 };
 
-export default ServiceForm;
+
